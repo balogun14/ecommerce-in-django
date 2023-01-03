@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+
+{% block title%} 
+  Products
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="content container" id="body">
+    <div class="row" id="head2">
+        <div class="col-sm-12">
+          <h2> Products</h2>
+        </div>
+    </div>
+    {% for pro in products %}
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 col-lg-4">
+          <div class="camera"> <a href=""><img class="img-fluid" src="{% static ""%}" alt="Photo"></a>
+          </div>
+          <h4>{{ pro.title}}</h4>
+          <div class="container">
+            <p>
+              {{ pro.description}}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock  %}
